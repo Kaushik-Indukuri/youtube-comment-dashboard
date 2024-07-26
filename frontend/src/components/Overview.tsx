@@ -5,6 +5,7 @@ import IntentClassification from './graphs/IntentClassification';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import KeywordCloud from './graphs/KeywordCloud';
 import SentimentOverTime from './graphs/SentimentOverTime';
+import CommentsOverTime from './graphs/CommentsOverTime';
 
 // Placeholder component for additional charts
 const PlaceholderChart = ({ title, className }: { title: string, className: string }) => (
@@ -41,9 +42,9 @@ const Dashboard = () => {
             </div>
 
             {/* Two rows with one long chart each */}
-            <div className="space-y-8">
+            <div className="space-y-8 mb-10">
                 <SentimentOverTime />
-                <SentimentOverTime />
+                <CommentsOverTime />
             </div>
         </div>
     );
