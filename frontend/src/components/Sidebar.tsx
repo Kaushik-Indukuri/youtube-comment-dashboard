@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, BarChart2, Ungroup, Table } from 'lucide-react';
+import { Link as RouterLink } from 'react-router-dom';
+
 
 
 const Sidebar = () => {
@@ -12,14 +14,14 @@ const Sidebar = () => {
                 <span className="text-lg font-semibold">Youtube Comment Analytics</span>
             </div>
             <nav>
-                <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-100 active:text-red-600">
+                <RouterLink to="/" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-100 active:text-red-600">
                     <BarChart2 className="inline-block mr-2 active:text-red-600" size={20} />
                     Dashboard
-                </a>
-                <a href="#" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-100 active:text-red-600">
+                </RouterLink>
+                <RouterLink to="/table" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-100 active:text-red-600">
                     <Table className="inline-block mr-2 active:text-red-600" size={20} />
                     Data Table
-                </a>
+                </RouterLink>
             </nav>
             <div className="px-4 py-4">
                 <h5 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Youtube Video URL</h5>

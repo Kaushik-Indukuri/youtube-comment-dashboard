@@ -1,10 +1,11 @@
 import { Search, Download, Grid } from 'lucide-react';
+import DataTable from './DataTable';
 
-const TableHeader = () => {
+const TablePage = () => {
     return (
         <header className="bg-white">
-            <div className="max-w-7xl mx-auto pt-7 pb-4 px-4 sm:px-6 lg:px-10">
-                <div className="flex justify-between items-center">
+            <div className="max-w-7xl mx-auto pt-10 pb-4 px-4 sm:px-6 lg:px-10">
+                <div className="flex justify-between items-center mb-10">
                     <h1 className="text-2xl font-semibold">Data Table</h1>
                     <div className="flex space-x-2">
                         <button className="px-3 py-1 border border-gray-300 rounded text-sm">+ Intent</button>
@@ -23,9 +24,10 @@ const TableHeader = () => {
                         </button>
                     </div>
                 </div>
+                <DataTable />
             </div>
         </header>
     );
 };
 
-export default TableHeader;
+export default TablePage;

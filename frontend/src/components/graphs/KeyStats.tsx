@@ -10,7 +10,7 @@ const StatsCard = () => {
         return () => clearTimeout(timer)
     }, [])
 
-    const [progress2, setProgress2] = React.useState(67);
+    const [progress2, setProgress2] = React.useState(78);
 
     React.useEffect(() => {
         const timer = setTimeout(() => setProgress2(127128), 177000)
@@ -24,8 +24,8 @@ const StatsCard = () => {
                     Like Ratio
                 </div>
                 <div className="flex items-start justify-center text-md font-medium">
-                    127,259
-                    <span className="text-muted-foreground">:50,000</span>
+                    187,543
+                    <span className="text-muted-foreground">:52,132</span>
                 </div>
                 <Progress value={progress2} className="w-[100%]" />
                 <div className="text-sm text-muted-foreground">

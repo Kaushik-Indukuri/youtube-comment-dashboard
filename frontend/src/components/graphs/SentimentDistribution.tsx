@@ -12,6 +12,8 @@ import {
 import {
     ChartConfig,
     ChartContainer,
+    ChartLegend,
+    ChartLegendContent,
     ChartTooltip,
     ChartTooltipContent,
 } from "@/components/ui/chart"
@@ -35,6 +37,18 @@ const chartData = [
 const chartConfig = {
     comments: {
         label: "Comments",
+    },
+    positive: {
+        label: "Positive",
+        color: "hsl(var(--chart-1))",
+    },
+    negative: {
+        label: "Negative",
+        color: "hsl(var(--chart-2))",
+    },
+    neutral: {
+        label: "Neutral",
+        color: "hsl(var(--chart-3))",
     },
 } satisfies ChartConfig
 
@@ -96,6 +110,10 @@ const SentimentDistribution = () => {
                                 }}
                             />
                         </Pie>
+                        <ChartLegend
+                            content={<ChartLegendContent nameKey="sentiment" />}
+                            className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+                        />
                     </PieChart>
                 </ChartContainer>
             </CardContent>

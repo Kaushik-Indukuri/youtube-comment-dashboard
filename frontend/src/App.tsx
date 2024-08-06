@@ -1,8 +1,5 @@
 import Sidebar from './components/Sidebar.tsx';
-import TableHeader from './components/TableHeader.tsx';
-import Header from './components/Header.tsx';
-import DataTable from './components/DataTable.tsx';
-import Overview from './components/Overview.tsx';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
@@ -10,10 +7,7 @@ const App = () => {
       <Sidebar />
       <div className="flex-1 flex flex-col overflow-hidden">
         <main className="flex-1 overflow-x-hidden overflow-y-auto bg-white">
-          <Header />
-          <div className="p-5">
-            <Overview />
-          </div>
+          <Outlet />
         </main>
       </div>
     </div>

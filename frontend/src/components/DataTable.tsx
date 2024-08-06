@@ -2,9 +2,25 @@ import React, { useState } from 'react';
 import { MoreHorizontal } from 'lucide-react';
 
 const data = [
-    { id: 1, comment: 'This is a short comment', sentiment: 0.68, intent: 'Feedback', region: 'US-West 1', lastEdited: '23/09/2023 13:00' },
-    { id: 2, comment: 'This is a very long comment that needs to be truncated and expandable. It contains multiple sentences and goes on for quite a while to demonstrate the expansion functionality.', sentiment: -0.59, intent: 'Complaint', region: 'US-East 2', lastEdited: '22/09/2023 10:45' },
-    // Add more data rows here
+    { id: 2, comment: 'Your voice and your content is what make me come back every time! I love that it can be applied to almost everything I do in my life, work, training, partnership and memory. I never realized that memory was a photographer and not a filmmaker  but know that you mentioned it, it is a photo ta come alive and short span of before and after the photo play in my mind but really not the whole thing. Thanks once again for this great video, I love how memory work and affect our lives in subtle ways.', sentiment: -0.59, intent: 'Complaint', region: 'US', lastEdited: '22/09/2023 10:45' },
+    { id: 3, comment: 'Great product, very satisfied with the quality!', sentiment: 0.85, intent: 'Praise', region: 'UK', lastEdited: '21/09/2023 09:30' },
+    { id: 4, comment: 'The service was okay, nothing special.', sentiment: 0.0, intent: 'Neutral', region: 'CA', lastEdited: '20/09/2023 14:20' },
+    { id: 5, comment: 'I had a terrible experience with the customer support.', sentiment: -0.75, intent: 'Complaint', region: 'AU', lastEdited: '19/09/2023 11:15' },
+    { id: 6, comment: 'The new update is fantastic, keep up the good work!', sentiment: 0.9, intent: 'Praise', region: 'US', lastEdited: '18/09/2023 16:45' },
+    { id: 7, comment: 'Not sure how I feel about the recent changes.', sentiment: -0.1, intent: 'Neutral', region: 'IN', lastEdited: '17/09/2023 08:30' },
+    { id: 8, comment: 'The app crashes frequently, please fix it.', sentiment: -0.8, intent: 'Complaint', region: 'US', lastEdited: '16/09/2023 12:00' },
+    { id: 9, comment: 'Excellent customer service, very helpful and friendly.', sentiment: 0.95, intent: 'Praise', region: 'UK', lastEdited: '15/09/2023 10:00' },
+    { id: 10, comment: 'The product is decent, but there is room for improvement.', sentiment: 0.2, intent: 'Feedback', region: 'CA', lastEdited: '14/09/2023 13:45' },
+    { id: 11, comment: 'The user interface is intuitive and easy to navigate. I love how everything is organized.', sentiment: 0.9, intent: 'Praise', region: 'US', lastEdited: '13/09/2023 09:30' },
+    { id: 12, comment: 'I encountered a bug while using the search feature. It doesn\'t return accurate results.', sentiment: -0.6, intent: 'Complaint', region: 'UK', lastEdited: '12/09/2023 14:20' },
+    { id: 13, comment: 'The product exceeded my expectations. It\'s definitely worth the price.', sentiment: 0.95, intent: 'Praise', region: 'CA', lastEdited: '11/09/2023 11:15' },
+    { id: 14, comment: 'I\'m not satisfied with the customer service. They were unhelpful and rude.', sentiment: -0.8, intent: 'Complaint', region: 'AU', lastEdited: '10/09/2023 16:45' },
+    { id: 15, comment: 'The recent update introduced some great new features. I\'m impressed!', sentiment: 0.8, intent: 'Praise', region: 'US', lastEdited: '09/09/2023 08:30' },
+    { id: 16, comment: 'I have mixed feelings about the changes. Some are good, but others are confusing.', sentiment: -0.2, intent: 'Neutral', region: 'IN', lastEdited: '08/09/2023 12:00' },
+    { id: 17, comment: 'The app crashes frequently on my device. It\'s frustrating.', sentiment: -0.9, intent: 'Complaint', region: 'US', lastEdited: '07/09/2023 10:00' },
+    { id: 18, comment: 'The customer service was exceptional. They went above and beyond to assist me.', sentiment: 0.98, intent: 'Praise', region: 'UK', lastEdited: '06/09/2023 13:45' },
+    { id: 19, comment: 'The product has some flaws, but overall it\'s decent.', sentiment: 0.3, intent: 'Feedback', region: 'CA', lastEdited: '05/09/2023 16:30' },
+    { id: 20, comment: 'I\'m impressed with the user interface, but the performance needs improvement.', sentiment: 0.5, intent: 'Feedback', region: 'AU', lastEdited: '04/09/2023 09:15' },
 ];
 
 const ExpandableComment = ({ comment }: { comment: string }) => {
