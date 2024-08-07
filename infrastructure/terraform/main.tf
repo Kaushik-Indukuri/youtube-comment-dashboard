@@ -70,8 +70,8 @@ resource "aws_instance" "kafka" {
 
 
               # Start Zookeeper and Kafka
-              sudo nohup /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties > /tmp/zookeeper.log 2>&1 &
-              sudo nohup /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties > /tmp/kafka.log 2>&1 &
+              sudo /opt/kafka/bin/zookeeper-server-start.sh /opt/kafka/config/zookeeper.properties &
+              sudo /opt/kafka/bin/kafka-server-start.sh /opt/kafka/config/server.properties &
 
               # Wait for Kafka to start (5 sec)
               sleep 5

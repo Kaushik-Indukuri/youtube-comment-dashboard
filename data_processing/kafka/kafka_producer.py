@@ -145,4 +145,5 @@ kafka_topic = 'youtube-comments'
 
 comments = get_comments(video_url)
 if comments:
+    # print(comments)
     send_to_kafka(comments, kafka_topic, kafka_config)
